@@ -1,0 +1,42 @@
+{
+   "name": "vue-demo-editor",
+   "version": "0.1.11",
+   "description": "基于vue-live的组件演示编辑器，实时效果展示",
+   "author": "Alex.Hua",
+   "files": [
+      "lib/*"
+   ],
+   "exports": {
+      "./lib/style.css": "./lib/style.css",
+      ".": {
+         "types": "./lib/index.d.ts",
+         "import": "./lib/vue-demo-editor.js",
+         "require": "./lib/vue-demo-editor.umd.cjs"
+      }
+   },
+   "main": "lib/vue-demo-editor.umd.cjs",
+   "module": "lib/vue-demo-editor.js",
+   "type": "module",
+   "scripts": {
+      "dev": "vite",
+      "build": "vite build --mode lib",
+      "analyse": "vite build --mode analyse",
+      "preview": "vite preview"
+   },
+   "dependencies": {
+      "highlight.js": "^11.8.0",
+      "prismjs": "^1.29.0",
+      "vue": "^3.3.4",
+      "vue-live": "^2.5.4"
+   },
+   "devDependencies": {
+      "@types/node": "^20.6.3",
+      "@vitejs/plugin-vue": "^4.3.4",
+      "rollup-plugin-visualizer": "^5.9.2",
+      "sass": "^1.68.0",
+      "typescript": "^5.2.2",
+      "vite": "^4.4.9",
+      "vite-plugin-dts": "^3.5.4",
+      "vue-tsc": "^1.8.13"
+   }
+}
