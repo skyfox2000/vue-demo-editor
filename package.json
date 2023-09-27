@@ -1,6 +1,6 @@
 {
    "name": "vue-demo-editor",
-   "version": "0.1.11",
+   "version": "0.1.12",
    "description": "基于vue-live的组件演示编辑器，实时效果展示",
    "author": "Alex.Hua",
    "files": [
@@ -38,5 +38,13 @@
       "vite": "^4.4.9",
       "vite-plugin-dts": "^3.5.4",
       "vue-tsc": "^1.8.13"
-   }
+   },
+   "repository": {
+     "type": "git",
+     "url": "https://github.com/skyfox2000/vue-demo-editor.git"
+   },
+   "bugs": {
+     "url": "https://github.com/skyfox2000/vue-demo-editor/issues"
+   },
+   "homepage": "https://github.com/skyfox2000/vue-demo-editor"
 }
