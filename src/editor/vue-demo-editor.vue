@@ -3,8 +3,18 @@
 import "prismjs/themes/prism-coy.min.css";
 // import "prismjs/themes/prism.min.css";
 import { VueLive } from "vue-live";
+import AceEditor from "./ace-editor.vue";
 import layout from "./layout.vue";
 const props = defineProps({
+   /**
+    * 显示模式
+    * Vue: 编辑Vue组件
+    * Code: 显示代码
+    */
+   mode: {
+      type: String,
+      default: "Vue"
+   },
    /**
     * 风格：
     * light：浅色
@@ -74,8 +84,9 @@ const handleCopyClick = () => {
 };
 </script>
 <template>
-   <div :class="props.theme">
+   <div style="width: 99%" :class="props.theme">
       <VueLive
+         v-if="mode === 'Vue'"
          :editorProps="{
             lineNumbers: true
          }"
@@ -85,6 +96,12 @@ const handleCopyClick = () => {
          @copy-click="handleCopyClick"
       >
       </VueLive>
+      <AceEditor
+         v-else
+         :theme="props.theme"
+         :code="props.code"
+         @copy-click="handleCopyClick"
+      ></AceEditor>
    </div>
 </template>
 

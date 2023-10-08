@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         "@": path.resolve("./src"),
+        "/ace-builds": path.resolve(__dirname, "node_modules/ace-builds"),
       },
       extensions: [".js", ".ts", ".vue", "json"]
     },

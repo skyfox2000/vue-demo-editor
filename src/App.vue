@@ -13,6 +13,7 @@ const success = () => {};
    <div class="rc-doc">
       <main>
          <VueDemoEditor
+            mode="Code"
             :code="code"
             :components="{ Icon: Icon }"
             :success="success"

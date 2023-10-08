@@ -6,9 +6,15 @@
             <slot name="preview"></slot>
          </div>
          <div class="toolbar">
-            <Icon icon="copy" @click="copy" style="font-size: 20px"></Icon>
+            <Icon
+               icon="copy"
+               v-if="props.copy"
+               @click="copy"
+               style="font-size: 20px"
+            ></Icon>
             <Icon
                icon="code"
+               v-if="props.source"
                @click="toggle"
                style="font-size: 26px; margin: 0px 0 0 10px"
             />
@@ -23,13 +29,29 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Icon from "./icon.vue";
-
-const emits = defineEmits(["copyClick"]);
+const props = defineProps({
+   /**
+    * 复制按钮
+    */
+   copy: {
+      type: Boolean,
+      default: true
+   },
+   /**
+    * 显示源代码按钮
+    */
+   source: {
+      type: Boolean,
+      default: true
+   }
+});
 
 const showSourceCode = ref(false); // 控制源代码显示或隐藏的状态
 const toggle = () => {
    showSourceCode.value = !showSourceCode.value;
 };
+
+const emits = defineEmits(["copyClick"]);
 
 const copy = () => {
    emits("copyClick");

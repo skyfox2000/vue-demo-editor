@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/node': ^20.6.3
   '@vitejs/plugin-vue': ^4.3.4
+  ace-builds: ^1.28.0
   highlight.js: ^11.8.0
   prismjs: ^1.29.0
   rollup-plugin-visualizer: ^5.9.2
@@ -13,12 +14,15 @@ specifiers:
   vue: ^3.3.4
   vue-live: ^2.5.4
   vue-tsc: ^1.8.13
+  vue3-ace: ^0.0.1
 
 dependencies:
+  ace-builds: 1.28.0
   highlight.js: 11.8.0
   prismjs: 1.29.0
   vue: 3.3.4
   vue-live: 2.5.4_vue@3.3.4
+  vue3-ace: 0.0.1
 
 devDependencies:
   '@types/node': 20.6.5
@@ -488,6 +492,10 @@ packages:
     transitivePeerDependencies:
       - typescript
     dev: true
+
+  /ace-builds/1.28.0:
+    resolution: {integrity: sha512-wkJp+Wz8MRHtCVdt65L/jPFLAQ0iqJZ2EeD2XWOvKGbIi4mZNwHlpHRLRB8ZnQ07VoiB0TLFWwIjjm2FL9gUcQ==}
+    dev: false
 
   /acorn-walk/8.2.0:
     resolution: {integrity: sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==}
@@ -1382,6 +1390,10 @@ packages:
       '@vue/runtime-dom': 3.3.4
       '@vue/server-renderer': 3.3.4_vue@3.3.4
       '@vue/shared': 3.3.4
+
+  /vue3-ace/0.0.1:
+    resolution: {integrity: sha512-HLm3Y806LM1wSqk85AOFH1IP9KM6NxCGwI3zTOHBZfluPmdy1X60ATUqQuL54tier87YRKvRYIN34oCkRauoZg==}
+    dev: false
 
   /walkes/0.2.1:
     resolution: {integrity: sha512-mbCCLh/TineJ2hxHpV6E0OmXht0P8R695BKHbhjrh56GwTHlPVbOTftetdih9XLQZgkFkrJXhGz1j9cxq03tWQ==}
